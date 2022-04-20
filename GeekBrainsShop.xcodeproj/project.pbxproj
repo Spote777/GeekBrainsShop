@@ -76,6 +76,73 @@
 /* End PBXFrameworksBuildPhase section */
 
 /* Begin PBXGroup section */
+		A215198A28108BD900AC2FEC /* App */ = {
+			isa = PBXGroup;
+			children = (
+				A2D94C742810841B001044B3 /* SceneDelegate.swift */,
+				A2D94C722810841B001044B3 /* AppDelegate.swift */,
+				A215198E28108C0600AC2FEC /* Flows */,
+				A215198D28108BF800AC2FEC /* Assembly */,
+				A215198C28108BEF00AC2FEC /* Entity */,
+				A215198B28108BE300AC2FEC /* BussinessLogic */,
+			);
+			path = App;
+			sourceTree = "<group>";
+		};
+		A215198B28108BE300AC2FEC /* BussinessLogic */ = {
+			isa = PBXGroup;
+			children = (
+			);
+			path = BussinessLogic;
+			sourceTree = "<group>";
+		};
+		A215198C28108BEF00AC2FEC /* Entity */ = {
+			isa = PBXGroup;
+			children = (
+			);
+			path = Entity;
+			sourceTree = "<group>";
+		};
+		A215198D28108BF800AC2FEC /* Assembly */ = {
+			isa = PBXGroup;
+			children = (
+			);
+			path = Assembly;
+			sourceTree = "<group>";
+		};
+		A215198E28108C0600AC2FEC /* Flows */ = {
+			isa = PBXGroup;
+			children = (
+				A2D94C762810841B001044B3 /* ViewController.swift */,
+				A2D94C782810841B001044B3 /* Main.storyboard */,
+			);
+			path = Flows;
+			sourceTree = "<group>";
+		};
+		A215198F28108C1300AC2FEC /* Core */ = {
+			isa = PBXGroup;
+			children = (
+			);
+			path = Core;
+			sourceTree = "<group>";
+		};
+		A215199028108C1800AC2FEC /* Resources */ = {
+			isa = PBXGroup;
+			children = (
+				A2D94C7B28108422001044B3 /* Assets.xcassets */,
+				A2D94C7D28108422001044B3 /* LaunchScreen.storyboard */,
+			);
+			path = Resources;
+			sourceTree = "<group>";
+		};
+		A215199128108C2E00AC2FEC /* Environments */ = {
+			isa = PBXGroup;
+			children = (
+				A2D94C8028108422001044B3 /* Info.plist */,
+			);
+			path = Environments;
+			sourceTree = "<group>";
+		};
 		A2D94C662810841B001044B3 = {
 			isa = PBXGroup;
 			children = (
@@ -99,13 +166,10 @@
 		A2D94C712810841B001044B3 /* GeekBrainsShop */ = {
 			isa = PBXGroup;
 			children = (
-				A2D94C722810841B001044B3 /* AppDelegate.swift */,
-				A2D94C742810841B001044B3 /* SceneDelegate.swift */,
-				A2D94C762810841B001044B3 /* ViewController.swift */,
-				A2D94C782810841B001044B3 /* Main.storyboard */,
-				A2D94C7B28108422001044B3 /* Assets.xcassets */,
-				A2D94C7D28108422001044B3 /* LaunchScreen.storyboard */,
-				A2D94C8028108422001044B3 /* Info.plist */,
+				A215198A28108BD900AC2FEC /* App */,
+				A215198F28108C1300AC2FEC /* Core */,
+				A215199028108C1800AC2FEC /* Resources */,
+				A215199128108C2E00AC2FEC /* Environments */,
 			);
 			path = GeekBrainsShop;
 			sourceTree = "<group>";
@@ -454,7 +518,7 @@
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				SWIFT_EMIT_LOC_STRINGS = YES;
 				SWIFT_VERSION = 5.0;
-				TARGETED_DEVICE_FAMILY = "1,2";
+				TARGETED_DEVICE_FAMILY = 1;
 			};
 			name = Debug;
 		};
@@ -482,7 +546,7 @@
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				SWIFT_EMIT_LOC_STRINGS = YES;
 				SWIFT_VERSION = 5.0;
-				TARGETED_DEVICE_FAMILY = "1,2";
+				TARGETED_DEVICE_FAMILY = 1;
 			};
 			name = Release;
 		};
