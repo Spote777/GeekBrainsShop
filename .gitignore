@@ -159,3 +159,16 @@ Pods/Target Support Files/Pods-GeekBrainsShop/Pods-GeekBrainsShop-umbrella.h
 Pods/Target Support Files/Pods-GeekBrainsShop/Pods-GeekBrainsShop.debug.xcconfig
 Pods/Target Support Files/Pods-GeekBrainsShop/Pods-GeekBrainsShop.modulemap
 Pods/Target Support Files/Pods-GeekBrainsShop/Pods-GeekBrainsShop.release.xcconfig
+Pods/Target Support Files/Pods-GeekBrainsShop-GeekBrainsShopTests/Pods-GeekBrainsShop-GeekBrainsShopTests-acknowledgements.markdown
+Pods/Target Support Files/Pods-GeekBrainsShop-GeekBrainsShopTests/Pods-GeekBrainsShop-GeekBrainsShopTests-acknowledgements.plist
+Pods/Target Support Files/Pods-GeekBrainsShop-GeekBrainsShopTests/Pods-GeekBrainsShop-GeekBrainsShopTests-dummy.m
+Pods/Target Support Files/Pods-GeekBrainsShop-GeekBrainsShopTests/Pods-GeekBrainsShop-GeekBrainsShopTests-frameworks-Debug-input-files.xcfilelist
+Pods/Target Support Files/Pods-GeekBrainsShop-GeekBrainsShopTests/Pods-GeekBrainsShop-GeekBrainsShopTests-frameworks-Debug-output-files.xcfilelist
+Pods/Target Support Files/Pods-GeekBrainsShop-GeekBrainsShopTests/Pods-GeekBrainsShop-GeekBrainsShopTests-frameworks-Release-input-files.xcfilelist
+Pods/Target Support Files/Pods-GeekBrainsShop-GeekBrainsShopTests/Pods-GeekBrainsShop-GeekBrainsShopTests-frameworks-Release-output-files.xcfilelist
+Pods/Target Support Files/Pods-GeekBrainsShop-GeekBrainsShopTests/Pods-GeekBrainsShop-GeekBrainsShopTests-frameworks.sh
+Pods/Target Support Files/Pods-GeekBrainsShop-GeekBrainsShopTests/Pods-GeekBrainsShop-GeekBrainsShopTests-Info.plist
+Pods/Target Support Files/Pods-GeekBrainsShop-GeekBrainsShopTests/Pods-GeekBrainsShop-GeekBrainsShopTests-umbrella.h
+Pods/Target Support Files/Pods-GeekBrainsShop-GeekBrainsShopTests/Pods-GeekBrainsShop-GeekBrainsShopTests.debug.xcconfig
+Pods/Target Support Files/Pods-GeekBrainsShop-GeekBrainsShopTests/Pods-GeekBrainsShop-GeekBrainsShopTests.modulemap
+Pods/Target Support Files/Pods-GeekBrainsShop-GeekBrainsShopTests/Pods-GeekBrainsShop-GeekBrainsShopTests.release.xcconfig
