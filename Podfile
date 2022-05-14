@@ -7,4 +7,8 @@ target 'GeekBrainsShop' do
 
 pod 'Alamofire'
 
+	target 'GeekBrainsShopTests' do
+
+	pod 'Alamofire'
+	end
 end
