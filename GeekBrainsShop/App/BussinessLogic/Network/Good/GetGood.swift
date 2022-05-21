@@ -12,8 +12,8 @@ class GetGood: AbstractRequestFactory {
     let errorParser: AbstractErrorParser
     let sessionManager: Session
     let queue: DispatchQueue
-    let baseUrl = URL(string: "https://raw.githubusercontent.com/GeekBrainsTutorial/online-store-api/master/responses/")!
-    
+    let baseUrl = URL(string: "https://arcane-dawn-08830.herokuapp.com/")!
+
     init(errorParser: AbstractErrorParser,
         sessionManager: Session,
         queue: DispatchQueue = DispatchQueue.global(qos: .utility)) {
@@ -24,7 +24,7 @@ class GetGood: AbstractRequestFactory {
 }
 
 extension GetGood: GetGoodRequestFactory {
-    func getGood(productId: Int, completionHandler: @escaping (AFDataResponse<Good>) -> Void) {
+    func getGood(productId: Int, completionHandler: @escaping (AFDataResponse<GoodResponse>) -> Void) {
         let requestModel = GetGood(baseUrl: baseUrl, productId: productId)
         self.request(request: requestModel, completionHandler: completionHandler)
     }
@@ -33,14 +33,14 @@ extension GetGood: GetGoodRequestFactory {
 extension GetGood {
     struct GetGood: RequestRouter {
         let baseUrl: URL
-        let method: HTTPMethod = .get
-        let path: String = "getGoodById.json"
+        let method: HTTPMethod = .post
+        let path: String = "getgood"
         
         let productId: Int
         
         var parameters: Parameters? {
             return [
-                "id_product": productId
+                "productId": productId
             ]
         }
     }

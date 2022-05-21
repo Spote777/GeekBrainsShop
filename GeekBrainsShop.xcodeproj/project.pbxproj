@@ -9,9 +9,9 @@
 /* Begin PBXBuildFile section */
 		32E042E42393B5393522472B /* Pods_GeekBrainsShop_GeekBrainsShopTests.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = A1AD674AB4C8EA85462970A8 /* Pods_GeekBrainsShop_GeekBrainsShopTests.framework */; };
 		7DD8C0F46C88246AC27C5306 /* Pods_GeekBrainsShop.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 5A25749E12B947FB1932FA7E /* Pods_GeekBrainsShop.framework */; };
+		A22BE8EF282FF9E5008665C3 /* DefaultResponse.swift in Sources */ = {isa = PBXBuildFile; fileRef = A22BE8EE282FF9E5008665C3 /* DefaultResponse.swift */; };
 		A2452DAF28158C2C00817714 /* DataRequest.swift in Sources */ = {isa = PBXBuildFile; fileRef = A2452DAE28158C2C00817714 /* DataRequest.swift */; };
 		A2452DB128158C6200817714 /* RequestRouter.swift in Sources */ = {isa = PBXBuildFile; fileRef = A2452DB028158C6200817714 /* RequestRouter.swift */; };
-		A2452DB328158CD700817714 /* LoginResult.swift in Sources */ = {isa = PBXBuildFile; fileRef = A2452DB228158CD700817714 /* LoginResult.swift */; };
 		A2452DB528158CF400817714 /* User.swift in Sources */ = {isa = PBXBuildFile; fileRef = A2452DB428158CF400817714 /* User.swift */; };
 		A2452DB828158D3E00817714 /* AuthRequestFactory.swift in Sources */ = {isa = PBXBuildFile; fileRef = A2452DB728158D3E00817714 /* AuthRequestFactory.swift */; };
 		A2452DBA28158D5E00817714 /* Auth.swift in Sources */ = {isa = PBXBuildFile; fileRef = A2452DB928158D5E00817714 /* Auth.swift */; };
@@ -20,9 +20,6 @@
 		A2452DC028158FB100817714 /* ChangeUserDataRequestFactory.swift in Sources */ = {isa = PBXBuildFile; fileRef = A2452DBF28158FB100817714 /* ChangeUserDataRequestFactory.swift */; };
 		A2452DC228158FD300817714 /* Signup.swift in Sources */ = {isa = PBXBuildFile; fileRef = A2452DC128158FD300817714 /* Signup.swift */; };
 		A2452DC428158FF800817714 /* SignupRequestFactory.swift in Sources */ = {isa = PBXBuildFile; fileRef = A2452DC328158FF800817714 /* SignupRequestFactory.swift */; };
-		A2452DC62815902700817714 /* ChangeUserDataResult.swift in Sources */ = {isa = PBXBuildFile; fileRef = A2452DC52815902700817714 /* ChangeUserDataResult.swift */; };
-		A2452DC82815903D00817714 /* LogoutResult.swift in Sources */ = {isa = PBXBuildFile; fileRef = A2452DC72815903D00817714 /* LogoutResult.swift */; };
-		A2452DCA2815905B00817714 /* SignupResult.swift in Sources */ = {isa = PBXBuildFile; fileRef = A2452DC92815905B00817714 /* SignupResult.swift */; };
 		A26810AE28158AE600B9F07C /* AbstractErrorParser.swift in Sources */ = {isa = PBXBuildFile; fileRef = A26810AD28158AE600B9F07C /* AbstractErrorParser.swift */; };
 		A26810B028158AFF00B9F07C /* ErrorParser.swift in Sources */ = {isa = PBXBuildFile; fileRef = A26810AF28158AFF00B9F07C /* ErrorParser.swift */; };
 		A26810B228158B7700B9F07C /* CustomDecodableSerializer.swift in Sources */ = {isa = PBXBuildFile; fileRef = A26810B128158B7700B9F07C /* CustomDecodableSerializer.swift */; };
@@ -32,8 +29,8 @@
 		A2CE94E328204A010037CE98 /* GetCatalogRequestFactory.swift in Sources */ = {isa = PBXBuildFile; fileRef = A2CE94E228204A010037CE98 /* GetCatalogRequestFactory.swift */; };
 		A2CE94E528204A1C0037CE98 /* GetGood.swift in Sources */ = {isa = PBXBuildFile; fileRef = A2CE94E428204A1C0037CE98 /* GetGood.swift */; };
 		A2CE94E728204A390037CE98 /* GetGoodRequestFactory.swift in Sources */ = {isa = PBXBuildFile; fileRef = A2CE94E628204A390037CE98 /* GetGoodRequestFactory.swift */; };
-		A2CE94E928204A660037CE98 /* Good.swift in Sources */ = {isa = PBXBuildFile; fileRef = A2CE94E828204A660037CE98 /* Good.swift */; };
-		A2CE94EB28204A770037CE98 /* Catalog.swift in Sources */ = {isa = PBXBuildFile; fileRef = A2CE94EA28204A770037CE98 /* Catalog.swift */; };
+		A2CE94E928204A660037CE98 /* GoodResponse.swift in Sources */ = {isa = PBXBuildFile; fileRef = A2CE94E828204A660037CE98 /* GoodResponse.swift */; };
+		A2CE94EB28204A770037CE98 /* CatalogResponse.swift in Sources */ = {isa = PBXBuildFile; fileRef = A2CE94EA28204A770037CE98 /* CatalogResponse.swift */; };
 		A2D94C732810841B001044B3 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = A2D94C722810841B001044B3 /* AppDelegate.swift */; };
 		A2D94C752810841B001044B3 /* SceneDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = A2D94C742810841B001044B3 /* SceneDelegate.swift */; };
 		A2D94C772810841B001044B3 /* ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = A2D94C762810841B001044B3 /* ViewController.swift */; };
@@ -67,6 +64,7 @@
 		5A25749E12B947FB1932FA7E /* Pods_GeekBrainsShop.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_GeekBrainsShop.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 		8CFB7462F40762A52D1E233D /* Pods-GeekBrainsShop-GeekBrainsShopTests.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-GeekBrainsShop-GeekBrainsShopTests.release.xcconfig"; path = "Target Support Files/Pods-GeekBrainsShop-GeekBrainsShopTests/Pods-GeekBrainsShop-GeekBrainsShopTests.release.xcconfig"; sourceTree = "<group>"; };
 		A1AD674AB4C8EA85462970A8 /* Pods_GeekBrainsShop_GeekBrainsShopTests.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_GeekBrainsShop_GeekBrainsShopTests.framework; sourceTree = BUILT_PRODUCTS_DIR; };
+		A22BE8EE282FF9E5008665C3 /* DefaultResponse.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DefaultResponse.swift; sourceTree = "<group>"; };
 		A2452DAE28158C2C00817714 /* DataRequest.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DataRequest.swift; sourceTree = "<group>"; };
 		A2452DB028158C6200817714 /* RequestRouter.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RequestRouter.swift; sourceTree = "<group>"; };
 		A2452DB228158CD700817714 /* LoginResult.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LoginResult.swift; sourceTree = "<group>"; };
@@ -90,8 +88,8 @@
 		A2CE94E228204A010037CE98 /* GetCatalogRequestFactory.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = GetCatalogRequestFactory.swift; sourceTree = "<group>"; };
 		A2CE94E428204A1C0037CE98 /* GetGood.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = GetGood.swift; sourceTree = "<group>"; };
 		A2CE94E628204A390037CE98 /* GetGoodRequestFactory.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = GetGoodRequestFactory.swift; sourceTree = "<group>"; };
-		A2CE94E828204A660037CE98 /* Good.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Good.swift; sourceTree = "<group>"; };
-		A2CE94EA28204A770037CE98 /* Catalog.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Catalog.swift; sourceTree = "<group>"; };
+		A2CE94E828204A660037CE98 /* GoodResponse.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = GoodResponse.swift; sourceTree = "<group>"; };
+		A2CE94EA28204A770037CE98 /* CatalogResponse.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CatalogResponse.swift; sourceTree = "<group>"; };
 		A2D94C6F2810841B001044B3 /* GeekBrainsShop.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = GeekBrainsShop.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		A2D94C722810841B001044B3 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		A2D94C742810841B001044B3 /* SceneDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SceneDelegate.swift; sourceTree = "<group>"; };
@@ -169,13 +167,10 @@
 		A215198C28108BEF00AC2FEC /* Entity */ = {
 			isa = PBXGroup;
 			children = (
-				A2452DB228158CD700817714 /* LoginResult.swift */,
 				A2452DB428158CF400817714 /* User.swift */,
-				A2452DC52815902700817714 /* ChangeUserDataResult.swift */,
-				A2452DC72815903D00817714 /* LogoutResult.swift */,
-				A2452DC92815905B00817714 /* SignupResult.swift */,
-				A2CE94E828204A660037CE98 /* Good.swift */,
-				A2CE94EA28204A770037CE98 /* Catalog.swift */,
+				A2CE94E828204A660037CE98 /* GoodResponse.swift */,
+				A2CE94EA28204A770037CE98 /* CatalogResponse.swift */,
+				A22BE8EE282FF9E5008665C3 /* DefaultResponse.swift */,
 			);
 			path = Entity;
 			sourceTree = "<group>";
@@ -219,6 +214,17 @@
 				A2D94C8028108422001044B3 /* Info.plist */,
 			);
 			path = Environments;
+			sourceTree = "<group>";
+		};
+		A22BE8F0282FFC55008665C3 /* oldFiles */ = {
+			isa = PBXGroup;
+			children = (
+				A2452DC92815905B00817714 /* SignupResult.swift */,
+				A2452DB228158CD700817714 /* LoginResult.swift */,
+				A2452DC72815903D00817714 /* LogoutResult.swift */,
+				A2452DC52815902700817714 /* ChangeUserDataResult.swift */,
+			);
+			path = oldFiles;
 			sourceTree = "<group>";
 		};
 		A2452DB628158D2E00817714 /* Network */ = {
@@ -294,6 +300,7 @@
 		A2D94C662810841B001044B3 = {
 			isa = PBXGroup;
 			children = (
+				A22BE8F0282FFC55008665C3 /* oldFiles */,
 				A2D94C712810841B001044B3 /* GeekBrainsShop */,
 				A2D94C8828108422001044B3 /* GeekBrainsShopTests */,
 				A2D94C9228108422001044B3 /* GeekBrainsShopUITests */,
@@ -569,26 +576,23 @@
 			files = (
 				A2452DB828158D3E00817714 /* AuthRequestFactory.swift in Sources */,
 				A2452DB128158C6200817714 /* RequestRouter.swift in Sources */,
-				A2CE94E928204A660037CE98 /* Good.swift in Sources */,
+				A2CE94E928204A660037CE98 /* GoodResponse.swift in Sources */,
 				A2452DAF28158C2C00817714 /* DataRequest.swift in Sources */,
 				A2452DBC28158DDA00817714 /* RequestFactory.swift in Sources */,
-				A2CE94EB28204A770037CE98 /* Catalog.swift in Sources */,
+				A2CE94EB28204A770037CE98 /* CatalogResponse.swift in Sources */,
 				A2452DBE28158F8800817714 /* ChangeUserData.swift in Sources */,
 				A26810B028158AFF00B9F07C /* ErrorParser.swift in Sources */,
 				A2D94C772810841B001044B3 /* ViewController.swift in Sources */,
-				A2452DC82815903D00817714 /* LogoutResult.swift in Sources */,
 				A2CE94E728204A390037CE98 /* GetGoodRequestFactory.swift in Sources */,
 				A2D94C732810841B001044B3 /* AppDelegate.swift in Sources */,
 				A2CE94E328204A010037CE98 /* GetCatalogRequestFactory.swift in Sources */,
 				A2D94C752810841B001044B3 /* SceneDelegate.swift in Sources */,
-				A2452DCA2815905B00817714 /* SignupResult.swift in Sources */,
 				A2452DC428158FF800817714 /* SignupRequestFactory.swift in Sources */,
-				A2452DB328158CD700817714 /* LoginResult.swift in Sources */,
-				A2452DC62815902700817714 /* ChangeUserDataResult.swift in Sources */,
 				A26810B228158B7700B9F07C /* CustomDecodableSerializer.swift in Sources */,
 				A2452DB528158CF400817714 /* User.swift in Sources */,
 				A26810AE28158AE600B9F07C /* AbstractErrorParser.swift in Sources */,
 				A2452DC228158FD300817714 /* Signup.swift in Sources */,
+				A22BE8EF282FF9E5008665C3 /* DefaultResponse.swift in Sources */,
 				A2452DC028158FB100817714 /* ChangeUserDataRequestFactory.swift in Sources */,
 				A2CE94E1282049D90037CE98 /* GetCatalog.swift in Sources */,
 				A2CE94E528204A1C0037CE98 /* GetGood.swift in Sources */,
