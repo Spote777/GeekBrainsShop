@@ -23,6 +23,10 @@ class ViewController: UIViewController {
         makeGetReviewsRequest()
         makeAddReviewRequest()
         makeRemoveReviewRequest()
+        makeGetCartRequest()
+        makePayCartRequest()
+        makeAddToCartRequest()
+        makeDeleteFromCartRequest()
     }
     
     // MARK: - Methods for testing purposes.
@@ -155,6 +159,62 @@ class ViewController: UIViewController {
         let factory = requestFactory.makeReviewsFactory()
         
         factory.removeReview(reviewId: 123){ response in
+            switch response.result {
+            case .success(let result):
+                print(result)
+            case .failure(let error):
+                print(error.localizedDescription)
+            }
+        }
+    }
+    
+    func makeGetCartRequest() {
+        let factory = requestFactory.makeCartRequestFactory()
+        
+        factory.getCart(user: User(id: 123)){ response in
+            switch response.result {
+            case .success(let result):
+                print(result)
+            case .failure(let error):
+                print(error.localizedDescription)
+            }
+        }
+    }
+    
+    func makePayCartRequest() {
+        let factory = requestFactory.makeCartRequestFactory()
+        
+        factory.payCart(user: User(id: 123)){ response in
+            switch response.result {
+            case .success(let result):
+                print(result)
+            case .failure(let error):
+                print(error.localizedDescription)
+            }
+        }
+    }
+    
+    func makeAddToCartRequest() {
+        let factory = requestFactory.makeCartRequestFactory()
+        
+        let cart = CartRequest(productId: 666, quantity: 1)
+        
+        factory.addToCart(cart: cart){ response in
+            switch response.result {
+            case .success(let result):
+                print(result)
+            case .failure(let error):
+                print(error.localizedDescription)
+            }
+        }
+    }
+    
+    func makeDeleteFromCartRequest() {
+        let factory = requestFactory.makeCartRequestFactory()
+        
+        let cart = CartRequest(productId: 666)
+        
+        factory.deleteFromCart(cart: cart){ response in
             switch response.result {
             case .success(let result):
                 print(result)

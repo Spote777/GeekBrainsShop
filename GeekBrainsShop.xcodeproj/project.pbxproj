@@ -14,6 +14,10 @@
 		A2325CC528393EA4006D4E76 /* ReviewRequestFactory.swift in Sources */ = {isa = PBXBuildFile; fileRef = A2325CC428393EA4006D4E76 /* ReviewRequestFactory.swift */; };
 		A2325CC728393ECC006D4E76 /* ReviewResponse.swift in Sources */ = {isa = PBXBuildFile; fileRef = A2325CC628393ECC006D4E76 /* ReviewResponse.swift */; };
 		A2325CC928393ED7006D4E76 /* ReviewRequest.swift in Sources */ = {isa = PBXBuildFile; fileRef = A2325CC828393ED7006D4E76 /* ReviewRequest.swift */; };
+		A2325CCC28394EA9006D4E76 /* CartRequestFactory.swift in Sources */ = {isa = PBXBuildFile; fileRef = A2325CCB28394EA9006D4E76 /* CartRequestFactory.swift */; };
+		A2325CCE28394EC0006D4E76 /* Cart.swift in Sources */ = {isa = PBXBuildFile; fileRef = A2325CCD28394EC0006D4E76 /* Cart.swift */; };
+		A2325CD028394F2C006D4E76 /* CartRequest.swift in Sources */ = {isa = PBXBuildFile; fileRef = A2325CCF28394F2C006D4E76 /* CartRequest.swift */; };
+		A2325CD228394F3E006D4E76 /* CartResponse.swift in Sources */ = {isa = PBXBuildFile; fileRef = A2325CD128394F3E006D4E76 /* CartResponse.swift */; };
 		A2452DAF28158C2C00817714 /* DataRequest.swift in Sources */ = {isa = PBXBuildFile; fileRef = A2452DAE28158C2C00817714 /* DataRequest.swift */; };
 		A2452DB128158C6200817714 /* RequestRouter.swift in Sources */ = {isa = PBXBuildFile; fileRef = A2452DB028158C6200817714 /* RequestRouter.swift */; };
 		A2452DB528158CF400817714 /* User.swift in Sources */ = {isa = PBXBuildFile; fileRef = A2452DB428158CF400817714 /* User.swift */; };
@@ -73,6 +77,10 @@
 		A2325CC428393EA4006D4E76 /* ReviewRequestFactory.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ReviewRequestFactory.swift; sourceTree = "<group>"; };
 		A2325CC628393ECC006D4E76 /* ReviewResponse.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ReviewResponse.swift; sourceTree = "<group>"; };
 		A2325CC828393ED7006D4E76 /* ReviewRequest.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ReviewRequest.swift; sourceTree = "<group>"; };
+		A2325CCB28394EA9006D4E76 /* CartRequestFactory.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CartRequestFactory.swift; sourceTree = "<group>"; };
+		A2325CCD28394EC0006D4E76 /* Cart.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Cart.swift; sourceTree = "<group>"; };
+		A2325CCF28394F2C006D4E76 /* CartRequest.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CartRequest.swift; sourceTree = "<group>"; };
+		A2325CD128394F3E006D4E76 /* CartResponse.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CartResponse.swift; sourceTree = "<group>"; };
 		A2452DAE28158C2C00817714 /* DataRequest.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DataRequest.swift; sourceTree = "<group>"; };
 		A2452DB028158C6200817714 /* RequestRouter.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RequestRouter.swift; sourceTree = "<group>"; };
 		A2452DB428158CF400817714 /* User.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = User.swift; sourceTree = "<group>"; };
@@ -177,6 +185,8 @@
 				A22BE8EE282FF9E5008665C3 /* DefaultResponse.swift */,
 				A2325CC628393ECC006D4E76 /* ReviewResponse.swift */,
 				A2325CC828393ED7006D4E76 /* ReviewRequest.swift */,
+				A2325CCF28394F2C006D4E76 /* CartRequest.swift */,
+				A2325CD128394F3E006D4E76 /* CartResponse.swift */,
 			);
 			path = Entity;
 			sourceTree = "<group>";
@@ -231,6 +241,15 @@
 			path = Reviews;
 			sourceTree = "<group>";
 		};
+		A2325CCA28394E99006D4E76 /* Cart */ = {
+			isa = PBXGroup;
+			children = (
+				A2325CCD28394EC0006D4E76 /* Cart.swift */,
+				A2325CCB28394EA9006D4E76 /* CartRequestFactory.swift */,
+			);
+			path = Cart;
+			sourceTree = "<group>";
+		};
 		A2452DB628158D2E00817714 /* Network */ = {
 			isa = PBXGroup;
 			children = (
@@ -241,6 +260,7 @@
 				A2CE94DF282049AD0037CE98 /* Catalog */,
 				A2CE94DE2820499E0037CE98 /* Good */,
 				A2325CC128393E7C006D4E76 /* Reviews */,
+				A2325CCA28394E99006D4E76 /* Cart */,
 			);
 			path = Network;
 			sourceTree = "<group>";
@@ -578,6 +598,7 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				A2325CCE28394EC0006D4E76 /* Cart.swift in Sources */,
 				A2452DB828158D3E00817714 /* AuthRequestFactory.swift in Sources */,
 				A2452DB128158C6200817714 /* RequestRouter.swift in Sources */,
 				A2CE94E928204A660037CE98 /* GoodResponse.swift in Sources */,
@@ -590,8 +611,11 @@
 				A2D94C772810841B001044B3 /* ViewController.swift in Sources */,
 				A2325CC728393ECC006D4E76 /* ReviewResponse.swift in Sources */,
 				A2CE94E728204A390037CE98 /* GetGoodRequestFactory.swift in Sources */,
+				A2325CD228394F3E006D4E76 /* CartResponse.swift in Sources */,
 				A2D94C732810841B001044B3 /* AppDelegate.swift in Sources */,
 				A2CE94E328204A010037CE98 /* GetCatalogRequestFactory.swift in Sources */,
+				A2325CD028394F2C006D4E76 /* CartRequest.swift in Sources */,
+				A2325CCC28394EA9006D4E76 /* CartRequestFactory.swift in Sources */,
 				A2325CC928393ED7006D4E76 /* ReviewRequest.swift in Sources */,
 				A2D94C752810841B001044B3 /* SceneDelegate.swift in Sources */,
 				A2452DC428158FF800817714 /* SignupRequestFactory.swift in Sources */,
