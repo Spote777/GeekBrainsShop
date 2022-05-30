@@ -10,5 +10,6 @@ pod 'Alamofire'
 	target 'GeekBrainsShopTests' do
 
 	pod 'Alamofire'
+	pod 'IQKeyboardManagerSwift'
 	end
 end
