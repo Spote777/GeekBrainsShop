@@ -105,7 +105,7 @@ extension EditUserDataViewController {
     
     
     private func rightNavButton() {
-        let refreshButton =  UIBarButtonItem(barButtonSystemItem: .close, target: self, action: #selector(signoutButtonTapped))
-        navigationItem.rightBarButtonItem = refreshButton
+        let signoutButton =  UIBarButtonItem(title: "Выход", style: .plain, target: self, action: #selector(signoutButtonTapped))
+        navigationItem.rightBarButtonItem = signoutButton
     }
 }

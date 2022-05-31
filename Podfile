@@ -11,5 +11,7 @@ pod 'Alamofire'
 
 	pod 'Alamofire'
 	pod 'IQKeyboardManagerSwift'
+	
+
 	end
 end

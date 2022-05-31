@@ -36,6 +36,8 @@
 		A27C0B562843CA3B00955A44 /* ExtensionUIView.swift in Sources */ = {isa = PBXBuildFile; fileRef = A27C0B552843CA3B00955A44 /* ExtensionUIView.swift */; };
 		A27C0B582843CA4600955A44 /* ExtensionUIViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = A27C0B572843CA4600955A44 /* ExtensionUIViewController.swift */; };
 		A27C0B5A2843CB3C00955A44 /* EditUserDataViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = A27C0B592843CB3C00955A44 /* EditUserDataViewController.swift */; };
+		A27C0B602846176B00955A44 /* CatalogTableViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = A27C0B5F2846176B00955A44 /* CatalogTableViewController.swift */; };
+		A27C0B622846177600955A44 /* CatalogTableViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = A27C0B612846177600955A44 /* CatalogTableViewCell.swift */; };
 		A2CE94DB282048580037CE98 /* ResponseCodableTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = A2CE94DA282048580037CE98 /* ResponseCodableTests.swift */; };
 		A2CE94DD282048620037CE98 /* RequestsTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = A2CE94DC282048620037CE98 /* RequestsTests.swift */; };
 		A2CE94E1282049D90037CE98 /* GetCatalog.swift in Sources */ = {isa = PBXBuildFile; fileRef = A2CE94E0282049D90037CE98 /* GetCatalog.swift */; };
@@ -52,6 +54,7 @@
 		A2D94C7F28108422001044B3 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = A2D94C7D28108422001044B3 /* LaunchScreen.storyboard */; };
 		A2D94C9428108422001044B3 /* GeekBrainsShopUITests.swift in Sources */ = {isa = PBXBuildFile; fileRef = A2D94C9328108422001044B3 /* GeekBrainsShopUITests.swift */; };
 		A2D94C9628108422001044B3 /* GeekBrainsShopUITestsLaunchTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = A2D94C9528108422001044B3 /* GeekBrainsShopUITestsLaunchTests.swift */; };
+		A2F5F70B2846225C00F673DC /* ExtensionUIImageView.swift in Sources */ = {isa = PBXBuildFile; fileRef = A2F5F70A2846225C00F673DC /* ExtensionUIImageView.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -104,6 +107,8 @@
 		A27C0B552843CA3B00955A44 /* ExtensionUIView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ExtensionUIView.swift; sourceTree = "<group>"; };
 		A27C0B572843CA4600955A44 /* ExtensionUIViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ExtensionUIViewController.swift; sourceTree = "<group>"; };
 		A27C0B592843CB3C00955A44 /* EditUserDataViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = EditUserDataViewController.swift; sourceTree = "<group>"; };
+		A27C0B5F2846176B00955A44 /* CatalogTableViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CatalogTableViewController.swift; sourceTree = "<group>"; };
+		A27C0B612846177600955A44 /* CatalogTableViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CatalogTableViewCell.swift; sourceTree = "<group>"; };
 		A2CE94DA282048580037CE98 /* ResponseCodableTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ResponseCodableTests.swift; sourceTree = "<group>"; };
 		A2CE94DC282048620037CE98 /* RequestsTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RequestsTests.swift; sourceTree = "<group>"; };
 		A2CE94E0282049D90037CE98 /* GetCatalog.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = GetCatalog.swift; sourceTree = "<group>"; };
@@ -124,6 +129,7 @@
 		A2D94C8F28108422001044B3 /* GeekBrainsShopUITests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = GeekBrainsShopUITests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
 		A2D94C9328108422001044B3 /* GeekBrainsShopUITests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = GeekBrainsShopUITests.swift; sourceTree = "<group>"; };
 		A2D94C9528108422001044B3 /* GeekBrainsShopUITestsLaunchTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = GeekBrainsShopUITestsLaunchTests.swift; sourceTree = "<group>"; };
+		A2F5F70A2846225C00F673DC /* ExtensionUIImageView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ExtensionUIImageView.swift; sourceTree = "<group>"; };
 		A439F8CC890B765086360A05 /* Pods-GeekBrainsShop.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-GeekBrainsShop.release.xcconfig"; path = "Target Support Files/Pods-GeekBrainsShop/Pods-GeekBrainsShop.release.xcconfig"; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
@@ -211,11 +217,12 @@
 		A215198E28108C0600AC2FEC /* Flows */ = {
 			isa = PBXGroup;
 			children = (
+				A27C0B5E2846174E00955A44 /* EditUserData */,
+				A27C0B5D2846174800955A44 /* SignUp */,
+				A27C0B5C2846174200955A44 /* Auth */,
+				A27C0B5B2846173B00955A44 /* Catalog */,
 				A2D94C782810841B001044B3 /* Main.storyboard */,
 				A2D94C762810841B001044B3 /* ViewController.swift */,
-				A27C0B522843BE9000955A44 /* AuthViewController.swift */,
-				A27C0B502843BE8800955A44 /* SignUpViewController.swift */,
-				A27C0B592843CB3C00955A44 /* EditUserDataViewController.swift */,
 			);
 			path = Flows;
 			sourceTree = "<group>";
@@ -323,8 +330,42 @@
 			children = (
 				A27C0B552843CA3B00955A44 /* ExtensionUIView.swift */,
 				A27C0B572843CA4600955A44 /* ExtensionUIViewController.swift */,
+				A2F5F70A2846225C00F673DC /* ExtensionUIImageView.swift */,
 			);
 			path = Helper;
+			sourceTree = "<group>";
+		};
+		A27C0B5B2846173B00955A44 /* Catalog */ = {
+			isa = PBXGroup;
+			children = (
+				A27C0B5F2846176B00955A44 /* CatalogTableViewController.swift */,
+				A27C0B612846177600955A44 /* CatalogTableViewCell.swift */,
+			);
+			path = Catalog;
+			sourceTree = "<group>";
+		};
+		A27C0B5C2846174200955A44 /* Auth */ = {
+			isa = PBXGroup;
+			children = (
+				A27C0B522843BE9000955A44 /* AuthViewController.swift */,
+			);
+			path = Auth;
+			sourceTree = "<group>";
+		};
+		A27C0B5D2846174800955A44 /* SignUp */ = {
+			isa = PBXGroup;
+			children = (
+				A27C0B502843BE8800955A44 /* SignUpViewController.swift */,
+			);
+			path = SignUp;
+			sourceTree = "<group>";
+		};
+		A27C0B5E2846174E00955A44 /* EditUserData */ = {
+			isa = PBXGroup;
+			children = (
+				A27C0B592843CB3C00955A44 /* EditUserDataViewController.swift */,
+			);
+			path = EditUserData;
 			sourceTree = "<group>";
 		};
 		A2CE94DE2820499E0037CE98 /* Good */ = {
@@ -638,12 +679,15 @@
 				A2325CC728393ECC006D4E76 /* ReviewResponse.swift in Sources */,
 				A2CE94E728204A390037CE98 /* GetGoodRequestFactory.swift in Sources */,
 				A2325CD228394F3E006D4E76 /* CartResponse.swift in Sources */,
+				A27C0B622846177600955A44 /* CatalogTableViewCell.swift in Sources */,
 				A2D94C732810841B001044B3 /* AppDelegate.swift in Sources */,
 				A2CE94E328204A010037CE98 /* GetCatalogRequestFactory.swift in Sources */,
 				A2325CD028394F2C006D4E76 /* CartRequest.swift in Sources */,
 				A2325CCC28394EA9006D4E76 /* CartRequestFactory.swift in Sources */,
+				A2F5F70B2846225C00F673DC /* ExtensionUIImageView.swift in Sources */,
 				A2325CC928393ED7006D4E76 /* ReviewRequest.swift in Sources */,
 				A2D94C752810841B001044B3 /* SceneDelegate.swift in Sources */,
+				A27C0B602846176B00955A44 /* CatalogTableViewController.swift in Sources */,
 				A2452DC428158FF800817714 /* SignupRequestFactory.swift in Sources */,
 				A27C0B532843BE9000955A44 /* AuthViewController.swift in Sources */,
 				A26810B228158B7700B9F07C /* CustomDecodableSerializer.swift in Sources */,
