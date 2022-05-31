@@ -45,7 +45,9 @@ extension Signup {
                 "email": user.email ?? "",
                 "gender": user.gender ?? "",
                 "creditCard": user.creditCard ?? "",
-                "bio": user.bio ?? ""
+                "bio": user.bio ?? "",
+                "name": user.name ?? "",
+                "lastname": user.lastname ?? ""
             ]
         }
     }

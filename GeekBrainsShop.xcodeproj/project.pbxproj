@@ -31,6 +31,11 @@
 		A26810AE28158AE600B9F07C /* AbstractErrorParser.swift in Sources */ = {isa = PBXBuildFile; fileRef = A26810AD28158AE600B9F07C /* AbstractErrorParser.swift */; };
 		A26810B028158AFF00B9F07C /* ErrorParser.swift in Sources */ = {isa = PBXBuildFile; fileRef = A26810AF28158AFF00B9F07C /* ErrorParser.swift */; };
 		A26810B228158B7700B9F07C /* CustomDecodableSerializer.swift in Sources */ = {isa = PBXBuildFile; fileRef = A26810B128158B7700B9F07C /* CustomDecodableSerializer.swift */; };
+		A27C0B512843BE8800955A44 /* SignUpViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = A27C0B502843BE8800955A44 /* SignUpViewController.swift */; };
+		A27C0B532843BE9000955A44 /* AuthViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = A27C0B522843BE9000955A44 /* AuthViewController.swift */; };
+		A27C0B562843CA3B00955A44 /* ExtensionUIView.swift in Sources */ = {isa = PBXBuildFile; fileRef = A27C0B552843CA3B00955A44 /* ExtensionUIView.swift */; };
+		A27C0B582843CA4600955A44 /* ExtensionUIViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = A27C0B572843CA4600955A44 /* ExtensionUIViewController.swift */; };
+		A27C0B5A2843CB3C00955A44 /* EditUserDataViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = A27C0B592843CB3C00955A44 /* EditUserDataViewController.swift */; };
 		A2CE94DB282048580037CE98 /* ResponseCodableTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = A2CE94DA282048580037CE98 /* ResponseCodableTests.swift */; };
 		A2CE94DD282048620037CE98 /* RequestsTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = A2CE94DC282048620037CE98 /* RequestsTests.swift */; };
 		A2CE94E1282049D90037CE98 /* GetCatalog.swift in Sources */ = {isa = PBXBuildFile; fileRef = A2CE94E0282049D90037CE98 /* GetCatalog.swift */; };
@@ -94,6 +99,11 @@
 		A26810AD28158AE600B9F07C /* AbstractErrorParser.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AbstractErrorParser.swift; sourceTree = "<group>"; };
 		A26810AF28158AFF00B9F07C /* ErrorParser.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ErrorParser.swift; sourceTree = "<group>"; };
 		A26810B128158B7700B9F07C /* CustomDecodableSerializer.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CustomDecodableSerializer.swift; sourceTree = "<group>"; };
+		A27C0B502843BE8800955A44 /* SignUpViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SignUpViewController.swift; sourceTree = "<group>"; };
+		A27C0B522843BE9000955A44 /* AuthViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AuthViewController.swift; sourceTree = "<group>"; };
+		A27C0B552843CA3B00955A44 /* ExtensionUIView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ExtensionUIView.swift; sourceTree = "<group>"; };
+		A27C0B572843CA4600955A44 /* ExtensionUIViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ExtensionUIViewController.swift; sourceTree = "<group>"; };
+		A27C0B592843CB3C00955A44 /* EditUserDataViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = EditUserDataViewController.swift; sourceTree = "<group>"; };
 		A2CE94DA282048580037CE98 /* ResponseCodableTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ResponseCodableTests.swift; sourceTree = "<group>"; };
 		A2CE94DC282048620037CE98 /* RequestsTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RequestsTests.swift; sourceTree = "<group>"; };
 		A2CE94E0282049D90037CE98 /* GetCatalog.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = GetCatalog.swift; sourceTree = "<group>"; };
@@ -203,6 +213,9 @@
 			children = (
 				A2D94C782810841B001044B3 /* Main.storyboard */,
 				A2D94C762810841B001044B3 /* ViewController.swift */,
+				A27C0B522843BE9000955A44 /* AuthViewController.swift */,
+				A27C0B502843BE8800955A44 /* SignUpViewController.swift */,
+				A27C0B592843CB3C00955A44 /* EditUserDataViewController.swift */,
 			);
 			path = Flows;
 			sourceTree = "<group>";
@@ -210,6 +223,7 @@
 		A215198F28108C1300AC2FEC /* Core */ = {
 			isa = PBXGroup;
 			children = (
+				A27C0B542843CA2C00955A44 /* Helper */,
 				A26810AC28158A9700B9F07C /* Network */,
 			);
 			path = Core;
@@ -302,6 +316,15 @@
 				A2452DB028158C6200817714 /* RequestRouter.swift */,
 			);
 			path = Network;
+			sourceTree = "<group>";
+		};
+		A27C0B542843CA2C00955A44 /* Helper */ = {
+			isa = PBXGroup;
+			children = (
+				A27C0B552843CA3B00955A44 /* ExtensionUIView.swift */,
+				A27C0B572843CA4600955A44 /* ExtensionUIViewController.swift */,
+			);
+			path = Helper;
 			sourceTree = "<group>";
 		};
 		A2CE94DE2820499E0037CE98 /* Good */ = {
@@ -604,10 +627,13 @@
 				A2CE94E928204A660037CE98 /* GoodResponse.swift in Sources */,
 				A2452DAF28158C2C00817714 /* DataRequest.swift in Sources */,
 				A2452DBC28158DDA00817714 /* RequestFactory.swift in Sources */,
+				A27C0B5A2843CB3C00955A44 /* EditUserDataViewController.swift in Sources */,
+				A27C0B562843CA3B00955A44 /* ExtensionUIView.swift in Sources */,
 				A2CE94EB28204A770037CE98 /* CatalogResponse.swift in Sources */,
 				A2325CC528393EA4006D4E76 /* ReviewRequestFactory.swift in Sources */,
 				A2452DBE28158F8800817714 /* ChangeUserData.swift in Sources */,
 				A26810B028158AFF00B9F07C /* ErrorParser.swift in Sources */,
+				A27C0B512843BE8800955A44 /* SignUpViewController.swift in Sources */,
 				A2D94C772810841B001044B3 /* ViewController.swift in Sources */,
 				A2325CC728393ECC006D4E76 /* ReviewResponse.swift in Sources */,
 				A2CE94E728204A390037CE98 /* GetGoodRequestFactory.swift in Sources */,
@@ -619,10 +645,12 @@
 				A2325CC928393ED7006D4E76 /* ReviewRequest.swift in Sources */,
 				A2D94C752810841B001044B3 /* SceneDelegate.swift in Sources */,
 				A2452DC428158FF800817714 /* SignupRequestFactory.swift in Sources */,
+				A27C0B532843BE9000955A44 /* AuthViewController.swift in Sources */,
 				A26810B228158B7700B9F07C /* CustomDecodableSerializer.swift in Sources */,
 				A2452DB528158CF400817714 /* User.swift in Sources */,
 				A26810AE28158AE600B9F07C /* AbstractErrorParser.swift in Sources */,
 				A2452DC228158FD300817714 /* Signup.swift in Sources */,
+				A27C0B582843CA4600955A44 /* ExtensionUIViewController.swift in Sources */,
 				A22BE8EF282FF9E5008665C3 /* DefaultResponse.swift in Sources */,
 				A2452DC028158FB100817714 /* ChangeUserDataRequestFactory.swift in Sources */,
 				A2CE94E1282049D90037CE98 /* GetCatalog.swift in Sources */,
