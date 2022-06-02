@@ -33,7 +33,7 @@ class ViewController: UIViewController {
     
     func makeAuthRequest() {
         let factory = requestFactory.makeAuthRequestFactory()
-        let user = User(login: "Somebody", password: "mypassword")
+        let user = User(login: "Somebody", password: "password")
         
         factory.login(user: user) { response in
             switch response.result {
