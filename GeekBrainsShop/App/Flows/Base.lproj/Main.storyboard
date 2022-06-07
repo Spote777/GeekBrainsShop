@@ -410,7 +410,7 @@
                                 <rect key="frame" x="0.0" y="44" width="414" height="818"/>
                                 <subviews>
                                     <stackView opaque="NO" contentMode="scaleToFill" axis="vertical" distribution="equalSpacing" spacing="21" translatesAutoresizingMaskIntoConstraints="NO" id="c3N-fa-Ngc">
-                                        <rect key="frame" x="16" y="21" width="382" height="374.5"/>
+                                        <rect key="frame" x="16" y="21" width="382" height="440.5"/>
                                         <subviews>
                                             <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Label" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="VKp-wp-mla">
                                                 <rect key="frame" x="0.0" y="0.0" width="382" height="20.5"/>
@@ -436,6 +436,18 @@
                                                 <nil key="textColor"/>
                                                 <nil key="highlightedColor"/>
                                             </label>
+                                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="Z8c-2k-Sx1">
+                                                <rect key="frame" x="0.0" y="395.5" width="382" height="45"/>
+                                                <constraints>
+                                                    <constraint firstAttribute="height" constant="45" id="pNC-bj-1Bj"/>
+                                                </constraints>
+                                                <inset key="imageEdgeInsets" minX="0.0" minY="0.0" maxX="2.2250738585072014e-308" maxY="0.0"/>
+                                                <state key="normal" title="Button"/>
+                                                <buttonConfiguration key="configuration" style="filled" title="Добавить в корзину"/>
+                                                <connections>
+                                                    <action selector="addItemInCart:" destination="6RH-2Y-BbY" eventType="touchUpInside" id="fkQ-gv-yWX"/>
+                                                </connections>
+                                            </button>
                                         </subviews>
                                     </stackView>
                                 </subviews>
@@ -469,6 +481,124 @@
                 <placeholder placeholderIdentifier="IBFirstResponder" id="OX9-Dd-w37" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
             </objects>
             <point key="canvasLocation" x="1621.7391304347827" y="827.67857142857144"/>
+        </scene>
+        <!--Cart Table View Controller-->
+        <scene sceneID="jwR-B5-xwE">
+            <objects>
+                <tableViewController storyboardIdentifier="CartTableViewController" id="fyO-55-16B" customClass="CartTableViewController" customModule="GeekBrainsShop" customModuleProvider="target" sceneMemberID="viewController">
+                    <tableView key="view" clipsSubviews="YES" contentMode="scaleToFill" alwaysBounceVertical="YES" dataMode="prototypes" style="plain" separatorStyle="default" rowHeight="-1" estimatedRowHeight="-1" sectionHeaderHeight="-1" estimatedSectionHeaderHeight="-1" sectionFooterHeight="-1" estimatedSectionFooterHeight="-1" id="cI0-kR-a0d">
+                        <rect key="frame" x="0.0" y="0.0" width="414" height="896"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <color key="backgroundColor" systemColor="systemBackgroundColor"/>
+                        <view key="tableFooterView" contentMode="scaleToFill" id="f52-Fm-GnM">
+                            <rect key="frame" x="0.0" y="213.5" width="414" height="200"/>
+                            <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                            <subviews>
+                                <stackView opaque="NO" contentMode="scaleToFill" axis="vertical" distribution="fillEqually" spacing="10" translatesAutoresizingMaskIntoConstraints="NO" id="Pll-iF-y55">
+                                    <rect key="frame" x="16" y="16" width="382" height="168"/>
+                                    <subviews>
+                                        <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Label" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" id="uqV-GG-xpV">
+                                            <rect key="frame" x="0.0" y="0.0" width="382" height="79"/>
+                                            <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                            <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                                            <nil key="textColor"/>
+                                            <nil key="highlightedColor"/>
+                                        </label>
+                                        <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="kUn-5D-oSZ">
+                                            <rect key="frame" x="0.0" y="89" width="382" height="79"/>
+                                            <inset key="imageEdgeInsets" minX="0.0" minY="0.0" maxX="2.2250738585072014e-308" maxY="0.0"/>
+                                            <state key="normal" title="Button"/>
+                                            <buttonConfiguration key="configuration" style="filled" image="cart" catalog="system" title="Оформить заказ"/>
+                                            <connections>
+                                                <action selector="checkOutButtonTapped:" destination="fyO-55-16B" eventType="touchUpInside" id="G3F-4r-HRn"/>
+                                            </connections>
+                                        </button>
+                                    </subviews>
+                                </stackView>
+                            </subviews>
+                            <color key="backgroundColor" systemColor="systemBackgroundColor"/>
+                            <constraints>
+                                <constraint firstItem="Pll-iF-y55" firstAttribute="leading" secondItem="f52-Fm-GnM" secondAttribute="leading" constant="16" id="Fqf-UI-vVv"/>
+                                <constraint firstAttribute="bottom" secondItem="Pll-iF-y55" secondAttribute="bottom" constant="16" id="YXm-iE-gGx"/>
+                                <constraint firstAttribute="trailing" secondItem="Pll-iF-y55" secondAttribute="trailing" constant="16" id="oqv-UX-bqu"/>
+                                <constraint firstItem="Pll-iF-y55" firstAttribute="top" secondItem="f52-Fm-GnM" secondAttribute="top" constant="16" id="rTJ-zg-OZ4"/>
+                            </constraints>
+                        </view>
+                        <prototypes>
+                            <tableViewCell clipsSubviews="YES" contentMode="scaleToFill" preservesSuperviewLayoutMargins="YES" selectionStyle="default" indentationWidth="10" reuseIdentifier="CartTableViewCell" id="yAE-ly-9uE" customClass="CartTableViewCell" customModule="GeekBrainsShop" customModuleProvider="target">
+                                <rect key="frame" x="0.0" y="44.5" width="414" height="146.5"/>
+                                <autoresizingMask key="autoresizingMask"/>
+                                <tableViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" preservesSuperviewLayoutMargins="YES" insetsLayoutMarginsFromSafeArea="NO" tableViewCell="yAE-ly-9uE" id="3no-JN-Td6">
+                                    <rect key="frame" x="0.0" y="0.0" width="414" height="146.5"/>
+                                    <autoresizingMask key="autoresizingMask"/>
+                                    <subviews>
+                                        <stackView opaque="NO" contentMode="scaleToFill" distribution="fillEqually" spacing="20" translatesAutoresizingMaskIntoConstraints="NO" id="MpW-VC-ii0">
+                                            <rect key="frame" x="16" y="16" width="382" height="114.5"/>
+                                            <subviews>
+                                                <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" translatesAutoresizingMaskIntoConstraints="NO" id="6no-UW-RRf">
+                                                    <rect key="frame" x="0.0" y="0.0" width="114" height="114.5"/>
+                                                    <constraints>
+                                                        <constraint firstAttribute="width" secondItem="6no-UW-RRf" secondAttribute="height" multiplier="1:1" id="vPx-vJ-cKf"/>
+                                                    </constraints>
+                                                </imageView>
+                                                <stackView opaque="NO" contentMode="scaleToFill" axis="vertical" distribution="fillEqually" translatesAutoresizingMaskIntoConstraints="NO" id="bek-55-w42">
+                                                    <rect key="frame" x="134" y="0.0" width="114" height="114.5"/>
+                                                    <subviews>
+                                                        <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Label" textAlignment="natural" lineBreakMode="tailTruncation" numberOfLines="0" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="Xfs-D3-HSO">
+                                                            <rect key="frame" x="0.0" y="0.0" width="114" height="57.5"/>
+                                                            <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                                                            <nil key="textColor"/>
+                                                            <nil key="highlightedColor"/>
+                                                        </label>
+                                                        <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Label" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="aCf-vp-q1a">
+                                                            <rect key="frame" x="0.0" y="57.5" width="114" height="57"/>
+                                                            <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                                                            <nil key="textColor"/>
+                                                            <nil key="highlightedColor"/>
+                                                        </label>
+                                                    </subviews>
+                                                </stackView>
+                                                <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="2ph-BD-KIQ">
+                                                    <rect key="frame" x="268" y="0.0" width="114" height="114.5"/>
+                                                    <constraints>
+                                                        <constraint firstAttribute="width" secondItem="2ph-BD-KIQ" secondAttribute="height" multiplier="1:1" id="1ac-sd-4oS"/>
+                                                        <constraint firstAttribute="width" constant="40" id="nON-GS-Vgm"/>
+                                                    </constraints>
+                                                    <inset key="imageEdgeInsets" minX="0.0" minY="0.0" maxX="2.2250738585072014e-308" maxY="0.0"/>
+                                                    <state key="normal" image="trash.circle" catalog="system"/>
+                                                    <connections>
+                                                        <action selector="deleteButtonTapped:" destination="yAE-ly-9uE" eventType="touchUpInside" id="vlz-Co-ztp"/>
+                                                    </connections>
+                                                </button>
+                                            </subviews>
+                                        </stackView>
+                                    </subviews>
+                                    <constraints>
+                                        <constraint firstItem="MpW-VC-ii0" firstAttribute="top" secondItem="3no-JN-Td6" secondAttribute="top" constant="16" id="8bh-nJ-ewo"/>
+                                        <constraint firstAttribute="bottom" secondItem="MpW-VC-ii0" secondAttribute="bottom" constant="16" id="F2W-yy-l9H"/>
+                                        <constraint firstAttribute="trailing" secondItem="MpW-VC-ii0" secondAttribute="trailing" constant="16" id="Uiu-xi-r2j"/>
+                                        <constraint firstItem="MpW-VC-ii0" firstAttribute="leading" secondItem="3no-JN-Td6" secondAttribute="leading" constant="16" id="xsZ-OR-5u5"/>
+                                    </constraints>
+                                </tableViewCellContentView>
+                                <connections>
+                                    <outlet property="productImage" destination="6no-UW-RRf" id="Ovh-4r-mfo"/>
+                                    <outlet property="productName" destination="Xfs-D3-HSO" id="ZS8-1o-VQ2"/>
+                                    <outlet property="productPrice" destination="aCf-vp-q1a" id="ywr-Dl-jzc"/>
+                                </connections>
+                            </tableViewCell>
+                        </prototypes>
+                        <connections>
+                            <outlet property="dataSource" destination="fyO-55-16B" id="YXW-6Q-VMX"/>
+                            <outlet property="delegate" destination="fyO-55-16B" id="KpU-GJ-qn0"/>
+                        </connections>
+                    </tableView>
+                    <connections>
+                        <outlet property="totalLabel" destination="uqV-GG-xpV" id="EW9-zt-86x"/>
+                    </connections>
+                </tableViewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="KCb-ci-hK3" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="2414" y="841"/>
         </scene>
         <!--Navigation Controller-->
         <scene sceneID="LVe-lU-eBR">
@@ -508,6 +638,8 @@
         </scene>
     </scenes>
     <resources>
+        <image name="cart" catalog="system" width="128" height="102"/>
+        <image name="trash.circle" catalog="system" width="128" height="121"/>
         <systemColor name="systemBackgroundColor">
             <color white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
         </systemColor>

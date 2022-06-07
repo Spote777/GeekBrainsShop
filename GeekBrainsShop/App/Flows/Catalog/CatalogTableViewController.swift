@@ -24,13 +24,17 @@ class CatalogTableViewController: UITableViewController {
     override func viewWillAppear(_ animated: Bool) {
         super.viewWillAppear(animated)
         fetchData()
-        rightNavButton()
+        NavButton()
     }
     
     // MARK: - OBJ-C Func
     
     @objc func editProfileButtonTapped(sender: UIButton) {
         editProfile()
+    }
+    
+    @objc func openCartButtonTapped(sender: UIButton) {
+        openCart()
     }
     
     // MARK: - Table view data source
@@ -79,14 +83,22 @@ extension CatalogTableViewController {
         }
     }
     
-    private func rightNavButton() {
-        let rightNavButton =  UIBarButtonItem(image: UIImage.init(systemName: "gearshape"), style: .plain, target: self, action: #selector(editProfileButtonTapped))
+    private func NavButton() {
+        let leftNavButton = UIBarButtonItem(image: UIImage.init(systemName: "gearshape"), style: .plain, target: self, action: #selector(editProfileButtonTapped))
+        let rightNavButton = UIBarButtonItem(image: UIImage.init(systemName: "cart"), style: .plain, target: self, action: #selector(openCartButtonTapped))
         navigationItem.rightBarButtonItem = rightNavButton
+        navigationItem.leftBarButtonItem = leftNavButton
     }
     
     private func editProfile() {
         let storyboard = UIStoryboard(name: "Main", bundle:nil)
         let vc = storyboard.instantiateViewController(withIdentifier: "EditUserDataViewController")
+        navigationController?.pushViewController(vc, animated: true)
+    }
+    
+    private func openCart() {
+        let storyboard = UIStoryboard(name: "Main", bundle:nil)
+        let vc = storyboard.instantiateViewController(withIdentifier: "CartTableViewController")
         navigationController?.pushViewController(vc, animated: true)
     }
 }
