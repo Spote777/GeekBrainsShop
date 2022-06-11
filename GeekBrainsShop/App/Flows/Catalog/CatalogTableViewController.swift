@@ -9,7 +9,7 @@ import UIKit
 
 class CatalogTableViewController: UITableViewController {
     
-    // MARK: - IBOutlet
+    // MARK: - Propreties
     
     let requestFactory = RequestFactory()
     var catalog: [CatalogResponse] = []
@@ -46,6 +46,14 @@ class CatalogTableViewController: UITableViewController {
         let item = catalog[indexPath.row]
         cell.configurationCell(model: item)
         return cell
+    }
+    
+    override func tableView(_ tableView: UITableView, didSelectRowAt indexPath: IndexPath) {
+        let item = catalog[indexPath.row].productId
+        let storyboard = UIStoryboard(name: "Main", bundle:nil)
+        let vc = storyboard.instantiateViewController(withIdentifier: "ItemViewController") as! ItemViewController
+        vc.productId = item
+        navigationController?.pushViewController(vc, animated: true)
     }
 }
 
