@@ -18,13 +18,13 @@ class CatalogTableViewController: UITableViewController {
     
     override func viewDidLoad() {
         super.viewDidLoad()
-        
     }
     
     override func viewWillAppear(_ animated: Bool) {
         super.viewWillAppear(animated)
         fetchData()
         NavButton()
+        GALogger.logEvent(name: "catalog_view", key: "result", value: "success")
     }
     
     // MARK: - OBJ-C Func

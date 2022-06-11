@@ -22,7 +22,6 @@ class AuthViewController: UIViewController {
     
     override func viewDidLoad() {
         super.viewDidLoad()
-        
     }
     
     // MARK: - IBAcion
@@ -53,8 +52,10 @@ extension AuthViewController {
             DispatchQueue.main.async {
                 switch response.result {
                 case .success(let success): success.result == 1 ? self.fetchDataSuccess() : self.fetchDataError(message: "Неправильный логин или пароль")
+                    GALogger.logEvent(name: "login", key: "result", value: "success")
                     self.view.dismissSpinner()
                 case .failure(let error): self.fetchDataError(message: error.localizedDescription)
+                    GALogger.logEvent(name: "login", key: "result", value: "failure")
                     self.view.dismissSpinner()
                 }
             }
