@@ -13,15 +13,27 @@ protocol CartDelegate {
 
 class CartTableViewController: UITableViewController {
     
+    // MARK: - IBOutlet
+
     @IBOutlet weak var totalLabel: UILabel!
     
+    // MARK: - Propreties
+
     let factory = RequestFactory()
     
+    // MARK: - Life cycle
+
     override func viewDidLoad() {
         super.viewDidLoad()
-        
     }
     
+    override func viewWillAppear(_ animated: Bool) {
+        super.viewWillAppear(animated)
+        GALogger.logEvent(name: "view_cart", key: "result", value: "success")
+    }
+    
+    // MARK: - IBAction
+
     @IBAction func checkOutButtonTapped(_ sender: Any) {
         let cartFactory = factory.makeCartRequestFactory()
         let user = User(id: 123)
@@ -34,6 +46,7 @@ class CartTableViewController: UITableViewController {
                 DispatchQueue.main.async {
                     self.present(alert, animated: true, completion: {
                         AppCart.shared.items = []
+                        GALogger.logEvent(name: "checkout_progress", key: "result", value: "success")
                         self.tableView.reloadData()
                     })
                 }
